@@ -11,6 +11,7 @@
         font-family: "Poppins", sans-serif;
         margin: 0;
         padding: 0;
+        width: 100%;
       }
 
       .container {
@@ -20,6 +21,9 @@
       }
 
       .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
         margin-bottom: 18px;
       }
@@ -28,7 +32,10 @@
         font-size: 2em;
         margin-bottom: 10px;
       }
-
+      
+      .logos {
+        width: 100%;
+      }
       .logos img {
         width: 150px;
         margin: 0 10px;
@@ -82,19 +89,44 @@
         margin: 5px 70px;
       }
 
-      @media (max-width = 1200px) {
-        
+      @media (max-width: 768px) {
+        .container {
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 10px;
+      }
+
+        .logos {
+        width: 100%;
+        display: block;
+        justify-content: center;
+        align-items: center;
+      }
+      .logos img {
+        width: 350px;
+        height: 200px;
+      }
+      .section h2 {
+        display: none;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1.5fr;
+        gap: 10px;
+      }
       }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="header">
-        <h1>Board Members</h1>
+        <div>
+          <h1>Board Members</h1>
         <div class="logos">
           <img src="https://www.masaischool.com/images/our-investors/india-q-borderless.svg" alt="India Quotient" />
           <img src="https://www.masaischool.com/images/our-investors/capria-logo.svg" alt="Unitus Ventures" />
           <img src="https://www.masaischool.com/images/our-investors/omidyar-borderless.svg" alt="On Tpv Network" />
+        </div>
         </div>
       </div>
 
